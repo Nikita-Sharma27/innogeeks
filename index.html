@@ -1,359 +1,524 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<!-- Google Fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-<!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: 'Montserrat';
-  font-size: 22px;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <!-- Font Awesome -->
+    <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
 
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("hero1.png");
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-
-.hero-text button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 10px 25px;
-  color: black;
-  background-color: #ddd;
-  text-align: center;
-  cursor: pointer;
-}
-
-.hero-text button:hover {
-  background-color: #555;
-  color: white;
-}
-* {
-  box-sizing: border-box;
-}
-
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.responsive {
-  width: 100%;
-  height: auto;
-}
-.footer {
-  background-color: #414141;
-  width: 100%;
-  text-align: left;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 50px;
-  margin-top: 50px;
-}
-
-.footer .footer-left,
-.footer .footer-center,
-.footer .footer-right {
-  display: inline-block;
-  vertical-align: top;
-}
-
-
-/* footer left*/
-
-.footer .footer-left {
-  width: 33%;
-  padding-right: 15px;
-}
-
-.footer .about {
-  line-height: 20px;
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.footer .about span {
-  display: block;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.footer .icons {
-  margin-top: 25px;
-}
-
-.footer .icons a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  background-color: #33383b;
-  border-radius: 2px;
-  font-size: 20px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 35px;
-  margin-right: 3px;
-  margin-bottom: 5px;
-}
-
-
-/* footer center*/
-
-.footer .footer-center {
-  width: 30%;
-}
-
-.footer .footer-center i {
-  background-color: #ffffff;
-  color: #ffffff;
-  font-size: 25px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 42px;
-  margin: 10px 15px;
-  vertical-align: middle;
-}
-
-.footer .footer-center i.fa-envelope {
-  font-size: 17px;
-  line-height: 38px;
-}
-
-.footer .footer-center p {
-  display: inline-block;
-  color: #ffffff;
-  vertical-align: middle;
-  margin: 0;
-}
-
-.footer .footer-center p span {
-  display: block;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 2;
-}
-
-.footer .footer-center p a {
-  color: #fafafa;
-  text-decoration: none;
-}
-
-
-/* footer right*/
-
-.footer .footer-right {
-  width: 35%;
-}
-
-.footer h2 {
-  color: #ffffff;
-  font-size: 36px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.footer h2 span {
-  color: #ffffff;
-}
-
-.footer .menu {
-  color: #ffffff;
-  margin: 20px 0 12px;
-  padding: 0;
-}
-
-.footer .menu a {
-  display: inline-block;
-  line-height: 1.8;
-  text-decoration: none;
-  color: inherit;
-}
-
-.footer .menu a:hover {
-  color: #ffffff;
-}
-
-.footer .name {
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: normal;
-  margin: 0;
-}
-
-@media (max-width: 767px) {
-  .footer {
-    font-size: 14px;
-  }
-  .footer .footer-left,
-  .footer .footer-center,
-  .footer .footer-right {
-    display: block;
-    width: 100%;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-  .footer .footer-center i {
-    margin-left: 0;
-  }
-}
-
-</style>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Montserrat';
+            font-size: 22px;
+        }
+        
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(hero1.png);
+            height: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .hero-text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+        
+        .hero-text button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 10px 25px;
+            color: black;
+            background-color: #ddd;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .hero-text button:hover {
+            background-color: #555;
+            color: white;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        /* Create two equal columns that floats next to each other */
+        
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px;
+            /* Should be removed. Only for demonstration */
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .responsive {
+            width: 100%;
+            height: auto;
+        }
+        
+        .footer {
+            background-color: #414141;
+            width: 100%;
+            text-align: left;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 50px;
+            margin-top: 50px;
+        }
+        
+        .footer .footer-left,
+        .footer .footer-center,
+        .footer .footer-right {
+            display: inline-block;
+            vertical-align: top;
+        }
+        /* footer left*/
+        
+        .footer .footer-left {
+            width: 33%;
+            padding-right: 15px;
+        }
+        
+        .footer .about {
+            line-height: 20px;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: normal;
+            margin: 0;
+        }
+        
+        .footer .about span {
+            display: block;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .footer .icons {
+            margin-top: 25px;
+        }
+        
+        .footer .icons a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            background-color: #33383b;
+            border-radius: 2px;
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 35px;
+            margin-right: 3px;
+            margin-bottom: 5px;
+        }
+        /* footer center*/
+        
+        .footer .footer-center {
+            width: 30%;
+        }
+        
+        .footer .footer-center i {
+            background-color: #ffffff;
+            color: #ffffff;
+            font-size: 25px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 42px;
+            margin: 10px 15px;
+            vertical-align: middle;
+        }
+        
+        .footer .footer-center i.fa-envelope {
+            font-size: 17px;
+            line-height: 38px;
+        }
+        
+        .footer .footer-center p {
+            display: inline-block;
+            color: #ffffff;
+            vertical-align: middle;
+            margin: 0;
+        }
+        
+        .footer .footer-center p span {
+            display: block;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 2;
+        }
+        
+        .footer .footer-center p a {
+            color: #fafafa;
+            text-decoration: none;
+        }
+        /* footer right*/
+        
+        .footer .footer-right {
+            width: 35%;
+        }
+        
+        .footer h2 {
+            color: #ffffff;
+            font-size: 36px;
+            font-weight: normal;
+            margin: 0;
+        }
+        
+        .footer h2 span {
+            color: #ffffff;
+        }
+        
+        .footer .menu {
+            color: #ffffff;
+            margin: 20px 0 12px;
+            padding: 0;
+        }
+        
+        .footer .menu a {
+            display: inline-block;
+            line-height: 1.8;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .footer .menu a:hover {
+            color: #ffffff;
+        }
+        
+        .footer .name {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+        }
+        
+        .inno {
+            padding-left: 130px;
+            padding-right: 100px;
+        }
+        
+        .content {
+            padding-left: 130px;
+            padding-right: 100px;
+        }
+        
+        .responsive {
+            width: "580px";
+            height: "300px";
+            border-radius: 30px;
+        }
+        
+        .para2 {
+            padding-left: 100px;
+            padding-right: 100px;
+            width: 650px;
+        }
+        
+        .about {
+            padding-left: 80px;
+        }
+        
+        .achieve {
+            padding-left: 80px;
+        }
+        
+        .achieves {
+            padding-left: 60px;
+        }
+        
+        .all {
+            padding-left: 70px;
+            margin-top: 20px;
+            padding-right: 10px;
+            ;
+        }
+        
+        .ride {
+            font-size: 23px;
+        }
+        
+        .ride ul {
+            padding-top: 50px;
+        }
+        
+        .list {
+            padding-left: 130px;
+            padding-right: 40px;
+        }
+        
+        #process {
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        
+        #members {
+            font-size: 23px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        
+        @media (max-width: 775px) {
+            .footer {
+                font-size: 14px;
+            }
+            .footer .footer-left,
+            .footer .footer-center,
+            .footer .footer-right {
+                display: block;
+                width: 100%;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+            .footer .footer-center i {
+                margin-left: 0;
+            }
+            .logo {
+                width: 430px;
+                margin-top: 20%;
+            }
+            .about {
+                padding-left: -20px;
+                padding-right: 30px;
+            }
+            .inno {
+                width: 350px;
+                padding-left: 70px;
+                padding-right: 40px;
+            }
+            .achieve {
+                font-size: 30px;
+                font-weight: 30px;
+                padding-left: 50px;
+                padding-right: 10px;
+                text-decoration: underline;
+            }
+            .hero-image {
+                width: 370px;
+            }
+            .responsive {
+                width: 300px;
+                margin-right: 45px;
+                padding-right: 10px;
+            }
+            .para2 {
+                padding-top: 10px;
+                width: 380px;
+                margin-left: -50px;
+            }
+            .working {
+                font-size: 30px;
+                font-weight: 50px;
+                padding-left: 65px;
+                padding-right: 10px;
+                text-decoration: underline;
+            }
+            .all {
+                padding-top: -50px;
+            }
+            .ride {
+                padding-top: 10px;
+                width: 380px;
+                margin-left: 80px;
+            }
+            h4 {
+                font-size: 28px;
+                font-weight: 30px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="hero-image">
-  <div class="hero-text">
-    <img src="innologobright (1).png" alt="" width="800px"> <br><br>
-  </div>
-</div>
-<!-- ABOUT US START -->
-<h1 style="padding-left: 100px;"> 
-    ABOUT US
-</h1>
-<p style="padding-left: 150px; padding-right: 150px;">INNOGEEKS is a student driven technical society in KIET Group of Institutions. The main mission of our club is to advance and enhance students' knowledge to make them industry ready and play their role in the technological world in the best way they can. The club was initiated by a group of 5 students from IT, EC and ME Branch and is a result of their feverous efforts. The club was inaugurated on 17th August’18 at institute level, under IT Department. <br>
-    The domains that we work on:
-    <ul style="padding-left: 200px; padding-right: 150px;"> 
+    <div class=" hero-image">
+
+        <div class="hero-text ">
+            <img src=" innologobright (1).png " class="logo " alt=" " width="800px "> <br><br>
+
+        </div>
+    </div>
+
+    <!-- ABOUT US START -->
+
+
+    <h1 class="achieve">
+        ABOUT US
+    </h1>
+
+
+    <p class="inno">INNOGEEKS is a student driven technical society in KIET Group of Institutions. The main mission of our club is to advance and enhance students' knowledge to make them industry ready and play their role in the technological world in the best way they
+        can. The club was initiated by a group of 5 students from IT, EC and ME Branch and is a result of their feverous efforts. The club was inaugurated on 17th August’18 at institute level, under IT Department. <br> The domains that we work on:
+    </p>
+
+    <ul class="inno">
         <li>WEB DEVELOPMENT</li>
         <li>ANDROID DEVELOPMENT</li>
         <li>AUGMENTED REALITY/ VIRTUAL REALITY</li>
         <li>IOT</li>
         <li>MACHINE LEARNING</li>
     </ul>
-    <p style="padding-left: 150px; padding-right: 150px;">The club is committed towards generating and preserving knowledge and working with others to take on the world’s greatest challenges. We at INNOGEEKS are inclined towards providing its members an education that combines rigorous theory sessions as well as in-depth practical knowledge by giving them a hands-on working experience on live projects. We seek to inculcate, in each member of our community, the ability and passion to work wisely, creatively and effectively for the betterment of humankind.</p></p>
- <!-- ABOUT US OVER -->
+    <p class="inno">The club is committed towards generating and preserving knowledge and working with others to take on the world’s greatest challenges. We at INNOGEEKS are inclined towards providing its members an education that combines rigorous theory sessions as
+        well as in-depth practical knowledge by giving them a hands-on working experience on live projects. We seek to inculcate, in each member of our community, the ability and passion to work wisely, creatively and effectively for the betterment of
+        humankind.
+    </p>
+    </p>
+    <!-- ABOUT US OVER -->
 
 
-<!-- ACHIEVEMENTS  START-->
- <h1 style="padding-left: 100px;">ACHIEVEMENTS</h1>
- <div class="row" style="padding: 130px; padding-top: 0px;">
-    <div class="column">
-        <img src="SIH.png" alt="" width="580px" height="300px" style="border-radius: 30px;" class="responsive">
+    <!-- ACHIEVEMENTS  START-->
+    <h1 class="achieve">ACHIEVEMENTS</h1>
+
+
+
+    <div class="all">
+        <div class="row">
+
+            <div class="col-sm">
+                <img src="SIH.png " alt=" " class="responsive ">
+            </div>
+            <div class="col-sm">
+                <p class="para2">Our club has consistently outshined in various national and international competitions, our club members have persistently left their mark in various hackathons, some which include, Winner at Smart India Hackathon, Winner at NASA International
+                    Space Apps Challenge three consecutive years, Winner at Lowe’s India Campus Challenge, Winner at Sigma Hacks, Winner at Technovation Hackathon 2, and many more renowned names.</p>
+            </div>
+        </div>
     </div>
-    <div class="column" style="font-size: 23px;">
-      <p>Our club has consistently outshined in various national and international competitions, our club members have persistently left their mark in various hackathons, some which include, Winner at Smart India Hackathon, Winner at NASA International Space Apps Challenge three consecutive years, Winner at Lowe’s India Campus Challenge, Winner at Sigma Hacks, Winner at Technovation Hackathon 2, and many more renowned names.</p>
+    <!-- ACHIEVEMENTS OVER -->
+
+    <!-- CLUB ACTIVITIES -->
+    <h1 class="achieve">CLUB ACTIVITIES</h1>
+
+
+    <div class="row">
+        <div class="col-sm">
+            <ul class="list">
+                <li>Hackerspree - Hackathon Module </li>
+                <li>Coderspree - Coding Arena </li>
+                <li>Industrial & Alumni Talks </li>
+                <li>Technical Webinars and Workshops </li>
+                <li>Project Pitching and Discussions </li>
+                <li>Placement Ready Module </li>
+            </ul>
+        </div>
+        <div class="col-sm">
+            <img src="Activities.png " alt=" " width="30px " height="0px " style="border-radius: 30px; " class="responsive">
+        </div>
+
+        <br>
     </div>
-  </div>
- <!-- ACHIEVEMENTS OVER -->
 
- <!-- CLUB ACTIVITIES -->
- <h1 style="padding-left: 100px;">CLUB ACTIVITIES</h1>
- <div class="row" style="padding: 130px; padding-top: 0px;">
-    <div class="column" style="font-size: 23px;">
-      <ul style="padding-top: 50px;">
-        <li>Hackerspree - Hackathon Module </li>
-        <li>Coderspree - Coding Arena </li>
-        <li>Industrial & Alumni Talks </li>
-        <li>Technical Webinars and Workshops </li>
-        <li>Project Pitching and Discussions </li>
-        <li>Placement Ready Module </li>
-      </ul>
-  </div>
-  <div class="column">
-    <img src="Activities.png" alt="" width="30px" height="0px" style="border-radius: 30px;" class="responsive">
- </div> <br> 
-</div>
-<!-- CLUB ACTIVITIES OVER -->
+    <!-- CLUB ACTIVITIES OVER -->
 
-<!-- CLUB WORKING PROCESS -->
-<h1 style="padding-left: 100px; padding-top: 0px; margin: 0px;">CLUB WORKING PROCEDURE</h1>
-<p style="padding-left: 150px; padding-right: 150px;">
-    <ul style="padding-right: 150px; padding-left: 150px;">
-        <li>Club conducts regular classes after college hours, students are trained on their chosen domains.</li>
-        <li>Coding Session works in parallel on weekends, to improve problem solving skills. </li>
-        <li>Individual and Team Projects are assigned each semester. </li>
-        <li>Hackathon Participation opens the gate for analysing and debugging real-life challenges. </li>
-        <li>Inter-domains Projects are developed by blending different technologies together. </li>
-        <li>Placement Modules are organized for prefinal year students. </li>
-    </ul>
-</p>
-<!-- CLUB WORKING PROCESS OVER -->
+    <!-- CLUB WORKING PROCESS -->
+    <div class="row">
+        <h1 class="achieve">
+            CLUB WORKING PROCEDURE
+        </h1>
 
-<!-- CORE TEAM LEAD AND CORE TEAM MEMBERS -->
-<h1 style="padding-left: 100px;">CLUB TEAM</h1>
-<div class="row" style="padding: 130px; padding-top: 0px;">
-    <div class="column"> <h4><b>CORE LEADS</b></h4>
-        <p>Uddeshya (CS), Naman Mehrotra (CSIT), Rohan Khurana (CSE), Prakhar Yadav (ECE), Sakshmika Agarwal (ECE), Vedansh Kumar Gupta (IT), Shreya Asthana (IT), Anushka Sharma(ECE), Kritika Singh(EIE), Harsh Gupta(CS), Muskaan Mittal (ECE), Ravi Kumar Vishwakarma (ECE)</p>
+        <p style=" padding-left: 150px; padding-right: 150px;width: 75%; ">
+            <ul style="padding-right: 150px; padding-left: 150px; ">
+                <li>Club conducts regular classes after college hours, students are trained on their chosen domains.</li>
+                <li>Coding Session works in parallel on weekends, to improve problem solving skills. </li>
+                <li>Individual and Team Projects are assigned each semester. </li>
+                <li>Hackathon Participation opens the gate for analysing and debugging real-life challenges. </li>
+                <li>Inter-domains Projects are developed by blending different technologies together. </li>
+                <li>Placement Modules are organized for prefinal year students. </li>
+            </ul>
+        </p>
+
     </div>
-    <div class="column" style="font-size: 23px;"> <h4><b>CORE TEAM MEMBERS</b></h4>
-      <p>Aryan Tanwar (IT), Vanshika Singhal (IT), Vivek Kumar Singh (IT), Yashashvi Singh Bhaudauria (CSIT), Vanshika Namdev (CS), Sakshi Singh (CSIT), Ayushi Tyagi (CS), Shreyansh Tripathi (ECE), Vishwaas Saxena (CSE), Kartik Gupta (CS) , Deepak Chaturvedi (CSE), Tushar Gupta (CSIT), Chinmoy Chakraborty (IT)</p>
+
+    <!-- CLUB WORKING PROCESS OVER -->
+
+    <!-- CORE TEAM LEAD AND CORE TEAM MEMBERS -->
+    <h1 style="padding-left:60px;" class="achieve">CLUB TEAM</h1>
+
+    <div class="row">
+
+        <div class="col-sm" id="process">
+            <h4><b>CORE LEADS:</b></h4>
+            <p>Uddeshya (CS), Naman Mehrotra (CSIT), Rohan Khurana (CSE), Prakhar Yadav (ECE), Sakshmika Agarwal (ECE), Vedansh Kumar Gupta (IT), Shreya Asthana (IT), Anushka Sharma(ECE), Kritika Singh(EIE), Harsh Gupta(CS), Muskaan Mittal (ECE), Ravi Kumar
+                Vishwakarma (ECE)</p>
+        </div>
+
+
+        <div class="col-sm" id="members">
+            <h4><b>CORE TEAM MEMBERS:</b></h4>
+            <p>Aryan Tanwar (IT), Vanshika Singhal (IT), Vivek Kumar Singh (IT), Yashashvi Singh Bhaudauria (CSIT), Vanshika Namdev (CS), Sakshi Singh (CSIT), Ayushi Tyagi (CS), Shreyansh Tripathi (ECE), Vishwaas Saxena (CSE), Kartik Gupta (CS) , Deepak
+                Chaturvedi (CSE), Tushar Gupta (CSIT), Chinmoy Chakraborty (IT)</p>
+        </div>
     </div>
-  </div>
 
 
 
-  <!-- INNOGEEKS OFFICIAL WEBSITE -->
-    <h1 style="padding-left: 100px;">INNOGEEKS OFFICIAL WEBSITE</h1>
-    <p style="padding-left: 150px; padding-right: 150px;">Innogeeks has its own official website meant to keep up everyone updated with all that is going on with the club, including its achievements and the most recent activities, this website is completely built by the members of our club, link to which in given below</p>
-   <p style="padding-right: 10px; padding-left: 150px;">You can access the website by clicking on: <a href="https://www.innogeeks.in">Innogeeks</a></p> 
 
+    <!-- INNOGEEKS OFFICIAL WEBSITE -->
+    <h1 style="padding-left: 65px;" class=" achieve ">INNOGEEKS OFFICIAL WEBSITE</h1>
+    <p style="padding-left: 75px; padding-right: 60px; ">Innogeeks has its own official website meant to keep up everyone updated with all that is going on with the club, including its achievements and the most recent activities, this website is completely built by the members of our club, link to which
+        in given below</p>
+    <p style="padding-right: 60px; padding-left: 100px; ">You can access the website by clicking on: <a href="https://www.innogeeks.in ">Innogeeks</a></p>
 
-
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="footer-left col-md-4 col-sm-6">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d874.4733856521918!2d77.4975700836769!3d28.752595270149264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d28.771700499999998!2d77.50813819999999!4m5!1s0x390cf1ab89f5fd0d%3A0x53bdf09fa58c2bd9!2sKIET%20SCHOOL%20OF%20PHARMACY%2C%20KIET%20College%2C%20Shivam%20Vihar%2C%20Muradnagar%2C%20Uttar%20Pradesh%20201206!3m2!1d28.751285499999998!2d77.4990948!5e0!3m2!1sen!2sin!4v1638711772447!5m2!1sen!2sin" width="150" height="100"></iframe>
-      </div>
     </div>
-    <div class="footer-center col-md-4 col-sm-6">
-      <div>
-        <p><span> <b>IT Department E-Block, E310 and E401</b>
+
+    <!-- FOOTER -->
+    <footer class="footer ">
+        <div class="footer-left col-md-4 col-sm-6 ">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d874.4733856521918!2d77.4975700836769!3d28.752595270149264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d28.771700499999998!2d77.50813819999999!4m5!1s0x390cf1ab89f5fd0d%3A0x53bdf09fa58c2bd9!2sKIET%20SCHOOL%20OF%20PHARMACY%2C%20KIET%20College%2C%20Shivam%20Vihar%2C%20Muradnagar%2C%20Uttar%20Pradesh%20201206!3m2!1d28.751285499999998!2d77.4990948!5e0!3m2!1sen!2sin!4v1638711772447!5m2!1sen!2sin "
+                width="150 " height="100 "></iframe>
+        </div>
+        </div>
+        <div class="footer-center col-md-4 col-sm-6 ">
+            <div>
+                <p><span> <b>IT Department E-Block, E310 and E401</b>
         </span> KIET GROUPS OF INSTITUTIONS, GHAZIABAD</p>
-      </div>
-      <div>
-        <p> 5:00 PM to 8:00PM, MONDAY TO SATURDAY</p>
-      </div>
-      
-    </div>
-    <div class="footer-right" style="padding-left: 100px;">
-        <div>
-            <a href="https://www.facebook.com/innogeeks.kiet">FACEBOOK</a> <br>
-            <a href="https://www.instagram.com/innogeeks.kiet/">INSTAGRAM</a> <br>
-            <a href="https://www.linkedin.com/company/innogeeks/mycompany/">LINKEDIN</a> <br>
-            <a href=""></a>
-          </div>
-    </div>
-  </footer>
-  <!-- FOOTER END -->
+            </div>
+            <div>
+                <p> 5:00 PM to 8:00PM, MONDAY TO SATURDAY</p>
+            </div>
+
+        </div>
+        <div class="footer-right " style="padding-left: 100px; ">
+            <div>
+                <a href="https://www.facebook.com/innogeeks.kiet ">
+                    <i class="fa fa-facebook-square "> FACEBOOK</i></a> <br>
+                <a href="https://www.instagram.com/innogeeks.kiet/ ">
+                    <i class="fa fa-instagram "> INSTAGRAM</i></a> <br>
+                <a href="https://www.linkedin.com/company/innogeeks/mycompany/ ">
+                    <i class="fa fa-linkedin-square "> LINKEDIN</i></a> <br>
+                <a href=" "></a>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
 </body>
+
 </html>
